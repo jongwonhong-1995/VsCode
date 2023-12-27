@@ -70,7 +70,7 @@ def gym_analysis():
     str = "df = pd.read_csv('Category\TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv')"
     st.code(str, language='python')
 
-    df = pd.read_csv('Category\\TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv')
+    df = pd.read_csv('TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv')
     
     st.dataframe(df.head())
 
