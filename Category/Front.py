@@ -45,7 +45,7 @@ def dictonary_analysis():
 
     df['RGST_DT'] = pd.to_datetime(df['RGST_DT']).dt.strftime('%Y-%m-%d')
     df['UPDT_DT'] = pd.to_datetime(df['UPDT_DT']).dt.strftime('%Y-%m-%d')
-    str = " df = pd.read_csv('Category\TB_KLDGINFO_TERM_CTGRY_202312261335.csv')"
+    str = " df = pd.read_csv('Category/TB_KLDGINFO_TERM_CTGRY_202312261335.csv')"
     st.code(str, language = 'python')
     st.dataframe(df.head())
 
@@ -67,7 +67,7 @@ def gym_analysis():
 
     st.write("## 지식포럼 카테고리 분석")
     st.write('### Data Upload')
-    str = "df = pd.read_csv('Category\TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv')"
+    str = "df = pd.read_csv('Category/TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv')"
     st.code(str, language='python')
 
     df = pd.read_csv('TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv')
