@@ -34,7 +34,7 @@ def dictonary_analysis():
 
     ## df = pd.read_csv(file_path + file_name)
 
-    df = pd.read_csv('Category\\TB_KLDGINFO_TERM_CTGRY_202312261335.csv')
+    df = pd.read_csv('Category/TB_KLDGINFO_TERM_CTGRY_202312261335.csv')
 
     df.replace({'TERM_CTGRY_CODE' : {'TRNC_TECH' : '기술', 'TRNC_RND' : 'R&D', 'TRNC_PROD' : '생산',
                                      'TRNC_QLITY' : '품질', 'TRNSLAT_IT' : 'IT', 'TRNC_MNGMT_INV' : '경영/혁신',
