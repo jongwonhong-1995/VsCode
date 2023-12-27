@@ -29,10 +29,13 @@ def dictonary_analysis():
 
     st.write("## 용어사전 카테고리 분석")
     st.write('### Data Upload')
-    file_path = "C:/Users/LG/Desktop/"
-    file_name = "TB_KLDGINFO_TERM_CTGRY_202312261335.csv"
+    ## file_path = "C:/Users/LG/Desktop/"
+    ## file_name = "TB_KLDGINFO_TERM_CTGRY_202312261335.csv"
 
-    df = pd.read_csv(file_path + file_name)
+    ## df = pd.read_csv(file_path + file_name)
+
+    df = pd.read_csv('Category\TB_KLDGINFO_TERM_CTGRY_202312261335.csv')
+
     df.replace({'TERM_CTGRY_CODE' : {'TRNC_TECH' : '기술', 'TRNC_RND' : 'R&D', 'TRNC_PROD' : '생산',
                                      'TRNC_QLITY' : '품질', 'TRNSLAT_IT' : 'IT', 'TRNC_MNGMT_INV' : '경영/혁신',
                                      'TRNC_SCM_PURCH' : 'SCM/구매', 'TRNC_INFR_SAFE' : '인프라/안전',
@@ -42,8 +45,8 @@ def dictonary_analysis():
 
     df['RGST_DT'] = pd.to_datetime(df['RGST_DT']).dt.strftime('%Y-%m-%d')
     df['UPDT_DT'] = pd.to_datetime(df['UPDT_DT']).dt.strftime('%Y-%m-%d')
-
-    st.code('file_path = "C:/Users/LG/Desktop/" \nfile_name = "TB_KLDGINFO_TERM_CTGRY_202312261335.csv" \ndf = pd.read_csv(file_path + file_name)', language = 'python')
+    str = " df = pd.read_csv('Category\TB_KLDGINFO_TERM_CTGRY_202312261335.csv')"
+    st.code(str, language = 'python')
     st.dataframe(df.head())
 
     st.write('### Data Info')
@@ -64,13 +67,10 @@ def gym_analysis():
 
     st.write("## 지식포럼 카테고리 분석")
     st.write('### Data Upload')
+    str = "df = pd.read_csv('Category\TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv')"
+    st.code(str, language='python')
 
-    st.code('file_path = "C:/Users/LG/Desktop/" \nfile_name = "TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv" \ndf = pd.read_csv(file_path + file_name)', language = 'python')
-
-    file_path = 'C:/Users/LG/Desktop/'
-    file_name = 'TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv'
-
-    df = pd.read_csv(file_path + file_name)
+    df = pd.read_csv('Category\TB_GYM_FORUM_BZDP_CATEGORY_MAPNG_202312270953.csv')
     
     st.dataframe(df.head())
 
