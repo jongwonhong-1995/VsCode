@@ -94,6 +94,8 @@ def gym_analysis():
         fig = px.pie(df['카테고리'].value_counts(), values = 'count',
                      names=df['카테고리'].unique(), title = 'Category 별 분포')
         st.plotly_chart(fig, thema = 'streamlit', use_container_width=True)
+
+    st.write("### 데이터 다운로드 ")
     
 
 page_names_to_funcs = {
